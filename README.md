@@ -1,5 +1,4 @@
-# feed-reader
-Javascript Unit Testing in Jasmine
+# Feed-reader::Javascript Unit Testing with Jasmine
 
 All tests added to `jasmine/spec/feedreader.js`.
 
