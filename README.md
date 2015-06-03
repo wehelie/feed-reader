@@ -1,8 +1,11 @@
 # Feed-reader::Javascript Unit Testing with Jasmine
 
 All tests added to `jasmine/spec/feedreader.js`.
-#THE APP
+#THE `APP`
+The `APP` can be run by click 'run all' to test whether all `specs` will pass. Should there be any errors, `spec` details will be show in red, otherwise, green means pass. 
+
 ######LOCATED @ (http://wehelie.github.io/feed-reader/)
+
 #TESTS
 
 >1. test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty. 
