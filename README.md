@@ -2,7 +2,7 @@
 
 All tests added to `jasmine/spec/feedreader.js`.
 
-<span style="color:red">TESTS</span>
+#TESTS
 
 >1. test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty. 
 2. test that loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
@@ -13,3 +13,7 @@ All tests added to `jasmine/spec/feedreader.js`.
 7. test that ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container.
 8. test suite named "New Feed Selection".
 9. test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
+
+
+#RESULT
+[]()
