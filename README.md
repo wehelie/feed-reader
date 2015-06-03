@@ -2,7 +2,7 @@
 
 All tests added to `jasmine/spec/feedreader.js`.
 #THE `APP`
-The `APP` can be run by click 'run all' to test whether all `specs` will pass. Should there be any errors, `spec` details will be show in red, otherwise, green means pass. 
+The `APP` can be run by clicking 'run all' to test whether all `specs` will pass. Should there be any errors, `spec` details will be show in red, otherwise, green means pass. 
 
 ######LOCATED @ (http://wehelie.github.io/feed-reader/)
 
