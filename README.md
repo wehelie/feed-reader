@@ -16,4 +16,4 @@ All tests added to `jasmine/spec/feedreader.js`.
 
 
 #RESULT
-[]()
+![spec](https://cloud.githubusercontent.com/assets/3928442/7952045/65330d24-0964-11e5-9d99-2a87d4852a36.png)
