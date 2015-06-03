@@ -2,7 +2,7 @@
 
 All tests added to `jasmine/spec/feedreader.js`.
 
-#<span style="color:orange;">TESTS</span>
+#<span style="color:orange">TESTS</span>
 
 >1. test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty. 
 2. test that loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
