@@ -19,5 +19,5 @@ The `APP` can be run by clicking 'run all' to test whether all `specs` will pass
 9. test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
 
 
-#RESULT
+#RESULTS
 ![spec](https://cloud.githubusercontent.com/assets/3928442/7952045/65330d24-0964-11e5-9d99-2a87d4852a36.png)
