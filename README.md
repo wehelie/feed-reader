@@ -2,6 +2,12 @@
 
 All tests added to `jasmine/spec/feedreader.js`.
 #THE `APP`
+####Run the APP
+1. Open the index.html in the browser
+2. Eyeball the Jasmine reporter for results
+3. In the provided list, click on any feed to load
+4. To run all specs, click `Jasmine__TopLevel__Suite` then click, `Ran 0 of 7 specs - run all`
+
 The `APP` can be run by clicking 'run all' to test whether all `specs` will pass. Should there be any errors, `spec` details will be show in red, otherwise, green means pass. 
 
 ######LOCATED @ (http://wehelie.github.io/feed-reader/)
