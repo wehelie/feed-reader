@@ -32,9 +32,9 @@ $(function() {
          * and that the URL is not empty.
          */
         it('are URL not empty and defined', function() {
-            Object.keys(allFeeds).forEach(function(key){
-                expect(allFeeds[key].url).toBeDefined();
-                expect(allFeeds[key].url.length).not.toBe(0);
+            allFeeds.forEach(function(item){
+                expect(item.url).toBeDefined();
+                expect(item.url.length).not.toBe(0);
             });
         });
 
@@ -44,9 +44,9 @@ $(function() {
          * and that the name is not empty.
          */
         it('are names defined and not empty', function() {
-            Object.keys(allFeeds).forEach(function(key) {
-                expect(allFeeds[key].name).toBeDefined();
-                expect(allFeeds[key].name.length).not.toBe(0);
+            allFeeds.forEach(function(item) {
+                expect(item.name).toBeDefined();
+                expect(item.name.length).not.toBe(0);
             });
         });
     });
@@ -90,29 +90,39 @@ $(function() {
 
     /* new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(done) {
-        var firstFeed; 
-        var newFeed; 
+        var title; 
+        var header; 
 
         
         /* test ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
         */
         beforeEach(function(done) {
-            firstFeed = $(".feed").find("article").eq(0).find("h2").html(); 
-            loadFeed(1, done); 
+            // load feeds 
+            loadFeed(0, function() {
+                title = $(".feed .entry h2").empty(); 
+                header = $("h1.header-title").empty(); 
+                loadFeed(1, function() {
+                    done(); 
+                });
+            });
         });
-
+        it('has some other content', function(done) {
+            // compare feeds
+            expect($(".feed .entry h2").html() != title).toBe(true); 
+            // invoke the done callback function
+            done(); 
+        }); 
 
         it('is new feed loaded', function(done) {
-            newFeed = $(".feed").find("article").eq(0).find("h2").html();
             // compare feeds
-            expect(firstFeed !== newFeed).toBe(true); 
-            // invoke the done callback
+            expect($("h1.header-title").html() != header).toBe(true);
+            // invoke the done callback function
             done(); 
         });
 
-        // restore original state
-        afterEach(function(done) {
+        // restore original state 
+        afterAll(function(done) {
             loadFeed(0, done); 
         });
 
