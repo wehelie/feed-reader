@@ -84,7 +84,7 @@ $(function() {
         
         it('has at least one entry', function() {
             var entries = $(".feed").has(".entry");
-            expect(entries.length > 0).toBe(true); 
+            expect(entries.length).toBeGreaterThan(0); 
         });
     });
 
@@ -98,10 +98,14 @@ $(function() {
          * by the loadFeed function that the content actually changes.
         */
         beforeEach(function(done) {
+            // clear up all feed content first
+            title = $(".feed .entry h2").empty();
+            header = $("h1.header-title").empty();
+            
             // load feeds 
             loadFeed(0, function() {
-                title = $(".feed .entry h2").empty(); 
-                header = $("h1.header-title").empty(); 
+                title = $(".feed .entry h2"); 
+                header = $("h1.header-title"); 
                 loadFeed(1, function() {
                     done(); 
                 });
