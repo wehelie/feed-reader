@@ -90,8 +90,8 @@ $(function() {
 
     /* new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(done) {
-        var title; 
-        var header; 
+        var title = $(".feed .entry h2").html(''); 
+        var header = $("h1.header-title").html(''); 
 
         
         /* test ensures when a new feed is loaded
@@ -99,13 +99,13 @@ $(function() {
         */
         beforeEach(function(done) {
             // clear up all feed content first
-            title = $(".feed .entry h2").empty();
-            header = $("h1.header-title").empty();
+            title = $(".feed .entry h2").html();
+            header = $("h1.header-title").html();
             
             // load feeds 
             loadFeed(0, function() {
-                title = $(".feed .entry h2"); 
-                header = $("h1.header-title"); 
+                title = $(".feed .entry h2").html(); 
+                header = $("h1.header-title").html(); 
                 loadFeed(1, function() {
                     done(); 
                 });
@@ -113,14 +113,14 @@ $(function() {
         });
         it('has some other content', function(done) {
             // compare feeds
-            expect($(".feed .entry h2").html() != title).toBe(true); 
+            expect($(".feed .entry h2").html()).not.toBe(title); 
             // invoke the done callback function
             done(); 
         }); 
 
         it('is new feed loaded', function(done) {
             // compare feeds
-            expect($("h1.header-title").html() != header).toBe(true);
+            expect($("h1.header-title").html()).not.toBe(header);
             // invoke the done callback function
             done(); 
         });
