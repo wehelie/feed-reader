@@ -90,8 +90,8 @@ $(function() {
 
     /* new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(done) {
-        var title = $(".feed .entry h2").html(''); 
-        var header = $("h1.header-title").html(''); 
+        var title; 
+        var header; 
 
         
         /* test ensures when a new feed is loaded
